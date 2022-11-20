@@ -10,20 +10,34 @@ import {
 import GoogleIcon from "../../assets/home/google.svg";
 
 const Container = styled.form`
+  box-sizing: border-box;
   background-color: #b1cce7;
   border-radius: 16px;
   padding: 2rem 1.5rem;
   text-align: center;
+  width: fit-content;
+
+  @media (max-width: 990px) {
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+  }
 `;
 
 const Input = styled.input`
-  width: 300px;
+  box-sizing: border-box;
+  width: 320px;
   padding: 1rem 1.5rem;
-  margin: 1rem;
+  margin: 1rem 0;
   font-size: 0.8rem;
   border: none;
   border-radius: 8px;
   display: block;
+
+  @media (max-width: 990px) {
+    max-width: 100%;
+  }
 `;
 
 const Submit = styled.button`

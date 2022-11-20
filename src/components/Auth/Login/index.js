@@ -17,10 +17,21 @@ const InnerContainer = styled.div`
   overflow-y: auto;
   display: flex;
   align-items: center;
+
+  @media (max-width: 990px) {
+    box-sizing: border-box;
+    width: 100vw;
+    display: block;
+    padding: 1rem;
+  }
 `;
 
 const LeftContainer = styled.div`
   width: 60%;
+
+  @media (max-width: 990px) {
+    width: 100%;
+  }
 `;
 
 const RightContainer = styled.div`
@@ -28,6 +39,10 @@ const RightContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 990px) {
+    width: 100%;
+  }
 `;
 
 const Login = () => {
