@@ -1,6 +1,4 @@
 import React, { useEffect } from "react";
-import styled from "styled-components";
-import Background from "../assets/home/background.jpg";
 
 const Home = () => {
   useEffect(() => {

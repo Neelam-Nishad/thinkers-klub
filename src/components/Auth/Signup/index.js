@@ -2,12 +2,14 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Intro from "../Intro";
 import Form from "./Form";
+import BackgroundImage from "../../assets/home/auth-background.jpg";
 
 const Container = styled.div`
   box-sizing: border-box;
   min-height: 100vh;
   width: 100vw;
-  background-color: #204060;
+ background-image: url(${BackgroundImage});
+   background-size: cover;
 
   @media (max-width: 990px) {
     width: 100vw;
