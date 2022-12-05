@@ -75,9 +75,10 @@ const Form = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (data.password === data.password2) alert("passwords are not matching");
-    if (!data.name || !data.password) alert("Please enter all the details");
-    registerWithEmailAndPassword(data.name, data.email, data.password);
+    if (data.password !== data.password2) alert("passwords are not matching");
+    else if (!data.name || !data.password)
+      alert("Please enter all the details");
+    else registerWithEmailAndPassword(data.name, data.email, data.password);
   };
 
   useEffect(() => {
