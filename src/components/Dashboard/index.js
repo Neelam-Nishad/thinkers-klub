@@ -3,13 +3,12 @@ import styled from "styled-components";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../firebase";
 import { Link } from "react-router-dom";
+import DashboardMain from "./DashboardMain";
 
 const Container = styled.div`
-  background-color: pink;
+  background-color: #e6eeff;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 24px;
 `;
 
 const Dashboard = () => {
@@ -29,7 +28,7 @@ const Dashboard = () => {
           Plese ..<Link to="/login">Login</Link>.. to access this page
         </>
       ) : (
-        <>Hey YOU are on Dashboard</>
+        <DashboardMain user={user}/>
       )}
     </Container>
   );
