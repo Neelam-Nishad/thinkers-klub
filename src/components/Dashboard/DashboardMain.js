@@ -1,26 +1,25 @@
-import React from 'react'
-import styled from 'styled-components';
-import BlocklyImg from "../assets/dashboard/blockly.jpeg"
+import React from "react";
+import styled from "styled-components";
+import BlocklyImg from "../assets/dashboard/blockly.jpeg";
 import HtmlImg from "../assets/dashboard/html-css.jpeg";
 import PythonImg from "../assets/dashboard/python.jpeg";
 import CImg from "../assets/dashboard/cplus.jpeg";
 import AndroidImg from "../assets/dashboard/android.jpeg";
 import UnityImg from "../assets/dashboard/unity.jpeg";
 
-const Container = styled.div`
-`
+const Container = styled.div``;
 
 const Greeting = styled.h3`
-    text-align: right;
-`
+  text-align: right;
+`;
 
 const BoxContaienr = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 30px;
-    margin-top: 50px;
-`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 30px;
+  margin-top: 50px;
+`;
 
 const BoxInnerContaiener = styled.div`
   width: 31%;
@@ -33,23 +32,25 @@ const Box = styled.div`
 `;
 
 const Image = styled.img`
-    height: 100%;
-    width: 100%;
-    /* object-fit: cover; */
-    border-radius: 12px;
-`
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+`;
 
 const Type = styled.p`
-    text-align: center;
-    margin: 24px 0;
-    font-size: 24px;
-    color: grey;
-`
+  text-align: center;
+  margin: 24px 0;
+  font-size: 24px;
+  color: grey;
+`;
 
 const DashboardMain = ({ user }) => {
+  console.log("here", user);
   return (
     <Container>
-      <Greeting style={{ margin: "0" }}>Hi, Divyam</Greeting>
+      <Greeting style={{ margin: "0" }}>
+        Hi, {user?.displayName || "User"}
+      </Greeting>
       <BoxContaienr>
         <BoxInnerContaiener
           onClick={() =>
@@ -117,27 +118,16 @@ const DashboardMain = ({ user }) => {
           <Type>Android Studio</Type>
         </BoxInnerContaiener>
         <BoxInnerContaiener
-          onClick={() =>
-            window.open(
-              "https://unity.com/",
-              "_blank"
-            )
-          }
+          onClick={() => window.open("https://unity.com/", "_blank")}
         >
           <Box>
             <Image src={UnityImg} />
           </Box>
           <Type>Unity</Type>
         </BoxInnerContaiener>
-
-        {/* <Box />
-        <Box />
-        <Box />
-        <Box />
-        <Box /> */}
       </BoxContaienr>
     </Container>
   );
 };
 
-export default DashboardMain
+export default DashboardMain;
